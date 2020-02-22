@@ -41,6 +41,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/flutter_back.png
+    - assets/nav_menu_header.jpg
 
   # To add assets to your application, add an assets section, like this:
   # assets:

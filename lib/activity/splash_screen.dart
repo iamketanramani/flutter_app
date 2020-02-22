@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'MainScreen.dart';
+import 'package:flutter_app/activity/navigation_drawer.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -17,7 +17,7 @@ class SplashScreenState extends State<SplashScreen> {
       Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => MainScreen(),
+            builder: (context) => NavigationDrawer(),
           ));
     });
   }
