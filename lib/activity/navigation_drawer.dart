@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/fragment/first_fragment.dart';
+import 'package:flutter_app/fragment/second_fragment.dart';
 
 class NavigationDrawer extends StatefulWidget {
   final drawerList = [
     new DrawerModel("First Menu", Icons.android),
-    new DrawerModel("Second Menu", Icons.apps)
+    new DrawerModel("Second Menu", Icons.apps),
+    new DrawerModel("Third Menu", Icons.account_circle)
   ];
 
   @override
@@ -20,6 +22,9 @@ class NavigationDrawerState extends State<NavigationDrawer> {
     switch (position) {
       case 0:
         return new FirstFragment();
+
+      case 1:
+        return new SecondFragment();
 
       default:
         return Center(
@@ -76,7 +81,7 @@ class NavigationDrawerState extends State<NavigationDrawer> {
               leading: Icon(Icons.apps),
               title: new Text("Static Tab"),
               onTap: () {
-                print("Apps Clicked");
+                print("Static Tab Clicked");
               },
             ),
             new Divider(),
