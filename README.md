@@ -8,7 +8,9 @@ This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
 
-<img src="https://github.com/iamketanramani/flutter_app/blob/master/Screenshots/navigation_drawer.png" width="200" height="400" />
+<img src="https://github.com/iamketanramani/flutter_app/blob/master/screenshots/navigation_drawer.png" width="200" height="400" />
+<img src="https://github.com/iamketanramani/flutter_app/blob/master/screenshots/tab.png" width="200" height="400" />
+<img src="https://github.com/iamketanramani/flutter_app/blob/master/screenshots/http_get.png" width="200" height="400" />
 
 - [Flutter Material Library](https://api.flutter.dev/flutter/material/material-library.html)
 - [thetechnocafe](http://thetechnocafe.com/category/flutter/)
