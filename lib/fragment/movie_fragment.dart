@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_app/models/movie_model.dart';
@@ -19,6 +20,7 @@ class MovieFragmentState extends State<MovieFragment> {
   @override
   void initState() {
     super.initState();
+    //checkConnection();
     getMovies();
   }
 
@@ -45,7 +47,6 @@ class MovieFragmentState extends State<MovieFragment> {
                           /*Image.network(
                             item.image,
                             width: 100.0,
-
                             height: 100.0,
                           )*/
                           FadeInImage.assetNetwork(
@@ -93,5 +94,18 @@ class MovieFragmentState extends State<MovieFragment> {
       movieList.clear();
       movieList.addAll(records);
     });
+  }
+
+  Future<bool> checkConnection() async {
+    try {
+      final result = await InternetAddress.lookup('google.com');
+      if (result.isNotEmpty && result[0].rawAddress.isNotEmpty) {
+        debugPrint("Ketan: Internet Connection Available: " + result.toString());
+        return true;
+      }
+    } on SocketException catch (_) {
+      debugPrint("Ketan: No Internet Connection");
+      return false;
+    }
   }
 }

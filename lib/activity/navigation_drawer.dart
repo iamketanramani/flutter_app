@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/fragment/first_fragment.dart';
+import 'package:flutter_app/fragment/fourth_fragment.dart';
 import 'package:flutter_app/fragment/movie_fragment.dart';
 import 'package:flutter_app/fragment/second_fragment.dart';
 
@@ -7,7 +8,8 @@ class NavigationDrawer extends StatefulWidget {
   final drawerList = [
     new DrawerModel("First Fragment", Icons.android),
     new DrawerModel("Tab Example", Icons.apps),
-    new DrawerModel("Movie Listing", Icons.account_circle)
+    new DrawerModel("Movie Listing", Icons.account_circle),
+    new DrawerModel("Fourth Fragment", Icons.airplay)
   ];
 
   @override
@@ -29,6 +31,9 @@ class NavigationDrawerState extends State<NavigationDrawer> {
 
       case 2:
         return new MovieFragment();
+
+      case 3:
+        return new FourthFragment();
 
       default:
         return Center(
